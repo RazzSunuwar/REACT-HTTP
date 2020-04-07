@@ -8,8 +8,8 @@ class PostList extends Component {
         this.state = {
             posts: [],
             error: ''
-        }
-    }
+        };
+    };
 
     componentDidMount(){
         axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -21,7 +21,7 @@ class PostList extends Component {
             console.log(error)
             this.setState({errorMsg: 'Error retreiving data'})
         })
-    }
+    };
     
     render() {
         const { posts, errorMsg } = this.state
